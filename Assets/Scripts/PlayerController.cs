@@ -125,6 +125,10 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene("UnityFirstSave");
     }
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Barrel"))
