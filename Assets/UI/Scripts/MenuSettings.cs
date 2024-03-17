@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class MenuSettings : MonoBehaviour
 {
-    public void SetQuality(int qualityIndex)
+    [Header("--------- Audio Source ---------")]
+    [SerializeField] AudioSource musicSource;
+
+    [Header("--------- Audio Clip ---------")]
+    public AudioClip background;
+
+    
+
+    public void Start()
     {
-        QualitySettings.SetQualityLevel(qualityIndex);
+        musicSource.clip = background;
+        musicSource.Play();
     }
 }
