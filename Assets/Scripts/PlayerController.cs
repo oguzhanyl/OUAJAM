@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject gameOverPanel;
 
+    [SerializeField] float potionHpValue;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -126,6 +128,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Barrel"))
         {
             grounded = true;
+        }
+        if (collision.gameObject.CompareTag("Potion"))
+        {
+            hpSlider.value += potionHpValue;
+            Destroy(collision.gameObject);
         }
     }
 }

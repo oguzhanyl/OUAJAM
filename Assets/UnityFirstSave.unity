@@ -3299,6 +3299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potion: 0
   randomNum: 0
+  potPrefab: {fileID: 8516135334543826495, guid: 0baad338dfaec024f9aacfff432bcfda, type: 3}
 --- !u!61 &726416418
 BoxCollider2D:
   m_ObjectHideFlags: 0
