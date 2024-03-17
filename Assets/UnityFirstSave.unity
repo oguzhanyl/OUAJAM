@@ -3702,7 +3702,7 @@ MonoBehaviour:
   animalImages:
   - {fileID: 21300000, guid: 696b733570b62804db963d4b668d2de1, type: 3}
   - {fileID: 21300000, guid: 9a501e84514e27d49b54e8add34a2be9, type: 3}
-  - {fileID: -1507839146, guid: 65ce8b731e1efbd4d8e681ee98d2ab85, type: 3}
+  - {fileID: 21300000, guid: 901759ea97ca30f47ad6141e28388c49, type: 3}
   - {fileID: 21300000, guid: 59cf3b989a6a5c446a13427914309b92, type: 3}
   infoAnimal:
   - "Rex, sokakalarda a\xE7 ve yaln\u0131z olarak gezen sevgiye ihtiyac\u0131 olan
