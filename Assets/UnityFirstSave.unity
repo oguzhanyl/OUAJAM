@@ -2257,7 +2257,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.73, y: -1.44, z: -10.28}
+  m_LocalPosition: {x: -7.73, y: -1.44, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3386,7 +3386,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7, y: 0}
+  m_Offset: {x: 0.51, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3416,17 +3416,21 @@ MonoBehaviour:
   infoText: {fileID: 1266063443}
   animalImage: {fileID: 1093188528}
   animalImages:
-  - {fileID: 21300000, guid: e5d48ddba917147d4984d60c82de0138, type: 3}
-  - {fileID: 21300000, guid: e5d48ddba917147d4984d60c82de0138, type: 3}
+  - {fileID: 21300000, guid: 696b733570b62804db963d4b668d2de1, type: 3}
+  - {fileID: 21300000, guid: 9a501e84514e27d49b54e8add34a2be9, type: 3}
+  - {fileID: -1507839146, guid: 65ce8b731e1efbd4d8e681ee98d2ab85, type: 3}
+  - {fileID: 21300000, guid: 59cf3b989a6a5c446a13427914309b92, type: 3}
   infoAnimal:
   - "Rex, sokakalarda a\xE7 ve yaln\u0131z olarak gezen sevgiye ihtiyac\u0131 olan
     bir hayvan. Ona sevgi dolu ve mutlu olaca\u011F\u0131 bir aile bulal\u0131m m\u0131?"
   - "Bunny, yavruyken pet shopa sat\u0131lmak i\xE7in ka\xE7\u0131r\u0131ld\u0131
     ve \xF6zg\xFCrl\xFC\u011F\xFCn\xFC kaybetti. Ona mutlu olaca\u011F\u0131 bir
     aile bulal\u0131m m\u0131?"
-  - "Bunny, yavruyken pet shopa sat\u0131lmak i\xE7in ka\xE7\u0131r\u0131ld\u0131
-    ve \xF6zg\xFCrl\xFC\u011F\xFCn\xFC kaybetti. Ona mutlu olaca\u011F\u0131 bir
-    aile bulal\u0131m m\u0131??"
+  - "Whiskers, sokaklarda k\xF6t\xFC ko\u015Fullarda yaln\u0131z ya\u015Farken ka\xE7\u0131r\u0131ld\u0131.
+    Ona aile s\u0131cakl\u0131\u011F\u0131 alabilece\u011Fi bir yuva bulal\u0131m
+    m\u0131?"
+  - "Nibbles, sokaklarda yiyecek ve bar\u0131nak ararken, yakaland\u0131 ve kafese
+    hapsedildi. Ona bir yuva bulal\u0131m m\u0131?"
   animalRescued: {fileID: 3099363404947506532, guid: 89979cc15e946c745abc719966df3210, type: 3}
   mainCanvas: {fileID: 1828870959}
 --- !u!1 &728976437
@@ -6815,7 +6819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1508807935
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8118,7 +8122,7 @@ Transform:
   m_GameObject: {fileID: 1725789058}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.576449, y: 0.1942389, z: -4}
+  m_LocalPosition: {x: -5.576449, y: 0.1942389, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8889,7 +8893,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978772177}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -6.92}
   m_LocalScale: {x: 0.36450094, y: 0.29385, z: 0.34762457}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8897,7 +8901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0, y: 0.2665}
+  m_AnchoredPosition: {x: -0, y: 0.27}
   m_SizeDelta: {x: 3, y: 5.5203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978772179
