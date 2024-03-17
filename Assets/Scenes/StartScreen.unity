@@ -6700,7 +6700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: DEFENDER OF THE STREETS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0c192c22f005894eb81f94b8443fd91, type: 2}
   m_sharedMaterial: {fileID: 5795193361689471332, guid: d0c192c22f005894eb81f94b8443fd91, type: 2}
