@@ -143,8 +143,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Portal"))
         {
-            Debug.Log("Kazandýn");
-            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2);
         }
     }
 
