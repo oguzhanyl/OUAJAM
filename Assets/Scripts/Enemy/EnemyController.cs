@@ -55,7 +55,6 @@ public class EnemyController : MonoBehaviour
     private void EnemyMovement()
     {
         distance = Vector3.Distance(player.transform.position, gameObject.transform.position);
-        Debug.Log(distance);
         if (distance < range)
         {
             if (!fireBulletCalled)

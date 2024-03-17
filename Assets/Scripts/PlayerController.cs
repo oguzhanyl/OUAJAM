@@ -141,6 +141,11 @@ public class PlayerController : MonoBehaviour
             Instantiate(hpplusText, hpplusCanvas.transform);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Portal"))
+        {
+            Debug.Log("Kazandýn");
+            //SceneManager.LoadScene(2);
+        }
     }
 
 
