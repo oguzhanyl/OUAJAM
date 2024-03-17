@@ -29,7 +29,7 @@ public class BarrelDestroy : MonoBehaviour
         if (collision.gameObject.tag =="Barrel" && Input.GetKey(KeyCode.Mouse1))
         {
             Destroy(collision.gameObject);
-           randomNum = Random.Range(1, 10 + 1);
+            randomNum = Random.Range(1, 10 + 1);
             if(randomNum > 0 && randomNum < 6)  
             {
                

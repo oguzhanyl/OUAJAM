@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,16 +20,21 @@ public class PlayerController : MonoBehaviour
    [HideInInspector] public bool grounded;
     private bool started;
     private bool jumping;
-    
 
- 
+    [SerializeField] Slider hpSlider;
+    float hpValue;
+
+    [SerializeField] GameObject gameOverPanel;
+
     void Start()
     {
+        Time.timeScale = 1;
+
         rigid2d = GetComponent<Rigidbody2D>(); 
         _animator= GetComponent<Animator>();
        
         started = false;
-            
+        gameOverPanel.SetActive(false);
     }   
     void Update()
     {
@@ -60,7 +67,14 @@ public class PlayerController : MonoBehaviour
           }
           if (Input.GetKey("space")) { 
               started = true;                       
-          }     
+          }
+
+        hpValue = hpSlider.value;
+
+        if (hpValue <= hpSlider.minValue)
+        {
+            _animator.SetTrigger("death");
+        }
     }
     private void FixedUpdate()
     {
@@ -95,6 +109,17 @@ public class PlayerController : MonoBehaviour
                 jumpForce= 0f;
         }   
         
+    }
+
+    public void deathFunction()
+    {
+        Time.timeScale = 0f;
+        gameOverPanel.SetActive(true);
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("UnityFirstSave");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
