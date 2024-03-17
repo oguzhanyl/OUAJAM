@@ -22,8 +22,13 @@ public class CollectKeyandRescue : MonoBehaviour
     [SerializeField] TextMeshProUGUI animalRescued;
     [SerializeField] Canvas mainCanvas;
     private GameObject pressRPanel;
+
+    [SerializeField] AudioClip keyCollectSound, rescueSound;
+    [SerializeField] AudioSource auSource1;
+    private AudioSource auSource;
     private void Start()
     {
+        auSource = gameObject.GetComponent<AudioSource>();
         infoPanel.SetActive(false);
     }
     private void Update()
@@ -50,6 +55,7 @@ public class CollectKeyandRescue : MonoBehaviour
         keyCount--;
         infoPanel.SetActive(false);
         Instantiate(animalRescued, mainCanvas.transform);
+        auSource1.PlayOneShot(rescueSound);
         Destroy(cage);
     }
 
@@ -57,6 +63,7 @@ public class CollectKeyandRescue : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Key"))
         {
+            auSource.PlayOneShot(keyCollectSound);
             keyCount++;
             Destroy(collision.gameObject);
         }
