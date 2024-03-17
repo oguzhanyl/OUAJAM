@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             attackForce = 1;                       
         }
