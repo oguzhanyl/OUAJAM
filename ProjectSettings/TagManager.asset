@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Key
   - RescueAnimal
+  - Potion
   layers:
   - Default
   - TransparentFX

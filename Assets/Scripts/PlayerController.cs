@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float potionHpValue;
 
+    [SerializeField] GameObject hpplusText,hpplusCanvas;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -132,7 +134,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Potion"))
         {
             hpSlider.value += potionHpValue;
+            Instantiate(hpplusText, hpplusCanvas.transform);
             Destroy(collision.gameObject);
         }
     }
+
+
 }

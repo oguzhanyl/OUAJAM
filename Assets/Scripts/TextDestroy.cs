@@ -8,4 +8,9 @@ public class TextDestroy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void textSetActive()
+    {
+        gameObject.SetActive(false);
+    }
 }

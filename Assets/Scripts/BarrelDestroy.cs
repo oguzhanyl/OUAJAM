@@ -27,7 +27,6 @@ public class BarrelDestroy : MonoBehaviour
             return;
         }
         int random = Random.Range(0, 11);
-        Debug.Log("random num" + random);
         if (random <= 5)
         {
             Instantiate(potPrefab, triggeredBarrel.transform.position, Quaternion.identity);
@@ -44,8 +43,14 @@ public class BarrelDestroy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Barrel")
         {
-            Debug.Log("Barrel oldu");
             triggeredBarrel = collision.gameObject;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrel")
+        {
+            triggeredBarrel = null;
         }
     }
 
