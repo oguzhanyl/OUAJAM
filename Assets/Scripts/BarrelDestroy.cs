@@ -46,6 +46,13 @@ public class BarrelDestroy : MonoBehaviour
             triggeredBarrel = collision.gameObject;
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Barrel")
+        {
+            triggeredBarrel = collision.gameObject;
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Barrel")
