@@ -15,12 +15,13 @@ public class CollectKeyandRescue : MonoBehaviour
     [SerializeField]Image animalImage;
 
     public Sprite[] animalImages;
-    public string[] infoAnimal;
+    [TextArea]public string[] infoAnimal;
 
     GameObject cage;
     S_Cage scriptCage;
     [SerializeField] TextMeshProUGUI animalRescued;
     [SerializeField] Canvas mainCanvas;
+    private GameObject pressRPanel;
     private void Start()
     {
         infoPanel.SetActive(false);
@@ -30,6 +31,7 @@ public class CollectKeyandRescue : MonoBehaviour
         keyCountText.SetText(""+keyCount);
         if (Input.GetKey(KeyCode.R) && cage != null)
         {
+            Time.timeScale = 0;
             scriptCage = cage.GetComponent<S_Cage>();
             infoPanel.SetActive(true);
             int whichAnim = scriptCage.whichAnimal;
@@ -40,6 +42,7 @@ public class CollectKeyandRescue : MonoBehaviour
 
     public void AdoptAnimalButton()
     {
+        Time.timeScale = 1;
         if (keyCount <= 0)
         {
             return;
@@ -63,12 +66,15 @@ public class CollectKeyandRescue : MonoBehaviour
         if (collision.CompareTag("RescueAnimal"))
         {
             cage = collision.gameObject;
+            pressRPanel = cage.GetComponent<S_Cage>().pressR_Panel;
+            pressRPanel.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("RescueAnimal"))
         {
+            pressRPanel.SetActive(false);
             cage = null;
         }
     }

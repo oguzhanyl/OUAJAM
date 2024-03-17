@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
 
 
-    [SerializeField] float range = 4.9f;
+    [SerializeField] float range, movementRange;
     private float distance;
     [SerializeField] private float movementSpeed;
     bool fireBulletCalled;
@@ -28,7 +28,6 @@ public class EnemyController : MonoBehaviour
     {
         _animator = GetComponentInChildren<Animator>();
         player = GameObject.FindWithTag("Player");
-        StartCoroutine(FireBullet());
     }
     private void Update()
     {
@@ -66,10 +65,16 @@ public class EnemyController : MonoBehaviour
 
             }
         }
-        else
+        else if(distance<movementRange)
         {
+            StopAllCoroutines();
             transform.Translate(-1*movementSpeed * Time.deltaTime, 0, 0);
             fireBulletCalled = false;
+        }
+        else
+        {
+            fireBulletCalled = false;
+            StopAllCoroutines();
         }
     }
 
@@ -102,5 +107,10 @@ public class EnemyController : MonoBehaviour
         }
 
         StopCoroutine(FireBullet());
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.DrawWireSphere(transform.position, movementRange);
     }
 }
